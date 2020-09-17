@@ -55,12 +55,12 @@ if (typeof beNice === 'undefined') {
   beNice = undefined;
 }
 
-if (typeof fullName === 'undefined') {
-  fullName = undefined;
+if (typeof changeName === 'undefined') {
+  changeName = undefined;
 }
 
-if (typeof phoneCall === 'undefined') {
-  phoneCall = undefined;
+if (typeof hangUp === 'undefined') {
+  hangUp = undefined;
 }
 
 
