@@ -3,45 +3,37 @@
 ### Setup
 
 1. Navigate to this directory in your terminal.
-2. Run `npm install --global jest` if you have not yet done so to install the testing library.
-3. Preferably in a full-screen terminal, run `jest --watch-all` to start testing.
+2. Run `npm install` to install the testing library.
+3. Preferably in a full-screen terminal, run `npm test` to start testing.
 
 
 ### Workflow
 
-You'll be working in `main.test.js`, creating the variables and functions needed, according to the specifications given in the Tasks section below. Check your terminal for feedback on which aspect of the problem you have yet to complete!
+You'll be working in **`main.test.js`** this time!, creating the variables needed with the values asked for, according to the specifications given in the tests. Check your terminal for feedback on which aspect of the problem you have yet to complete, and read the specifications' actual code implementation for extra help; it makes explicit exactly what outputs are expected given the test inputs.
 
 
 ### Guidelines:
 
-* Please do **not** call the functions; just declare them! You can call them to check for your own testing purposes, but then either delete or comment out the line. (Because our test code runs your function and modifies the global variables, checking if the variable has been changed to the value we'd expect, if you're calling your function and changing it ALSO, the test code will change the value a second time and, when it goes to check the value, it will not be what the test code is expecting.)
-* If you are asked to define a variable in terms of another, do not recalculate the value of that variable. For example, if `x = 5`, and `y = 6`, and `z` is supposed to be the sum of `x` + `y`, do NOT set `y` to equal `11` directly. Use the `x` and `y` variables directly in that calculation instead.
+* This time, **declare your variables using `let`**!
+* Please do **not** call the functions; just declare them! You can call them to check for your own testing purposes, but then either delete or comment out the line.
+* If you are asked to define a variable in terms of another, do not recalculate the value of that variable. For example, if x = 5, and y = 6, and z is supposed to be x + y, do NOT set y to equal 11 directly. Use the variables instead.
 
 
 ### Tasks
 
-Let's start by creating our variables so that we can manipulate them later on with functions. Create those variables at the top of your file, OUTSIDE of any functions.
+Let's start by creating our variables (using `let` this time, but we'll move back to `const` soon enough!) so that we can manipulate them later on with functions. 
+
+* Create a variable called `x` and set it to the value 3.
+* Create a variable called `y` and set it to the value 10.
+* Create a variable called `z` and set it to the value 5.
+* Create a variable called `name` and set it the string version of your first name.
+* Create a variable called `greeting` and set it to the value `'HEY'`.
 
 
-##### Variables
+Now for some functions!
 
-* Create a variable named `x` and assign to it the value `3`.
-* Create a variable named `y` and assign to it the value `10`.
-* Create a variable called `squareTheNumber` and assign to it the value of `4`.
-* Create a variable called  `greeting` and  assign to it the string 'hello'.
-* Create a variable called  `firstName` and assign to it the string of your name.
-* Create a variable called  `callStatus` and assign to it the string 'ringing'.
-
-
-
-Now let's make these variables useful by writing some functions!
-
-
-##### Functions
-
-* Create a function named  `double` and have it double the value of `x`.
-* Create a function named  `triple` and have it triple the value of `y`.
-* Create a function named  `square` and have it square the value of `squareTheNumber`.
-* Create a function named  `beNice` and have it change the value of greeting to the string 'hello' plus your name using the value of the variable `firstName`. You can include other characters if you wish to make it look like a nice sentence.
-* Create a function named  `changeName` and have it change the value of `firstName` to the string 'Danger'.
-* Create a function named  `hangUp` and have it change the value of `callStatus` to the string 'call ended'.
+* Create a function called `multiply` that takes in one parameter and changes `x` to the product of `x` and that parameter.
+* Create a function called `modYBy` that takes in one parameter, divides `y` by that parameter, and sets `y` to the remainder of that division. Look up the JavaScript modulus operator if you don't remember it, because it could sure come in handy here!
+* Create a function called `opposite` that takes in a parameter and sets `z` to equal the opposite sign of that parameter. Note that we are not "reading" the value of `z` here. In other words, unlike the other problems here, it doesn't matter what `z` used to be!
+* Create a variable called `makeFullName` that takes in a string parameter and sets `name` to have that string at the end, with a space in the middle.
+* Create a function called `yellAt` that takes in a string parameter and adds that string to the end of `greeting`, with a comma and a space in between and an exclamation point at the end. This string concatenation (or "smooshing" in the technical parlance) should be set to be the new value of `greeting`.
